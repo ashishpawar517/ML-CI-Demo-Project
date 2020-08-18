@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import json
 import os
 import numpy as np
-
+from xgboost import XGBClassifier
 # Read in data
 X_train = np.genfromtxt("data/train_features.csv")
 y_train = np.genfromtxt("data/train_labels.csv")
@@ -13,8 +13,9 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 
 # Fit a model
-depth = 10
-clf = RandomForestClassifier(max_depth=depth)
+# depth = 10
+clf = XGBClassifier()
+
 clf.fit(X_train,y_train)
 
 acc = clf.score(X_test, y_test)
