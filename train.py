@@ -15,7 +15,7 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 # Fit a model
 # depth = 10
-clf = LGBClassifier()
+clf = LGBMClassifier()
 
 clf.fit(X_train,y_train)
 
