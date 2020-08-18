@@ -5,6 +5,7 @@ import json
 import os
 import numpy as np
 from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
 # Read in data
 X_train = np.genfromtxt("data/train_features.csv")
 y_train = np.genfromtxt("data/train_labels.csv")
@@ -14,7 +15,7 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 # Fit a model
 # depth = 10
-clf = XGBClassifier()
+clf = LGBClassifier()
 
 clf.fit(X_train,y_train)
 
