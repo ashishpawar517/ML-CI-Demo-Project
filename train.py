@@ -55,7 +55,7 @@ with open("metrics.txt", 'w') as outfile:
 
 
 f=open("metrics.txt", "a+")
-f.write("```")
+f.write("```\n")
 f.write(report)
 f.write("```")
 
