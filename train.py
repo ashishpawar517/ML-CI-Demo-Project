@@ -15,9 +15,9 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 # from xgboost import XGBClassifier
 # from lightgbm import LGBMClassifier
-from sklearn.ensemble import RandomForestClassifier
-
-clf = RandomForestClassifier()
+# from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+clf = KNeighborsClassifier(3)
 
 clf.fit(X_train,y_train)
 
