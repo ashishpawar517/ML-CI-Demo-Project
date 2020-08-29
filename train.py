@@ -17,8 +17,9 @@ y_test = np.genfromtxt("data/test_labels.csv")
 # from lightgbm import LGBMClassifier
 # from sklearn.ensemble import RandomForestClassifier
 # from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB 
-clf = GaussianNB()
+# from sklearn.naive_bayes import GaussianNB 
+from sklearn.svm import SVC
+clf = SVC(kernel='rbf', C=1.0, gamma='auto', probability=True)
 
 clf.fit(X_train,y_train)
 
