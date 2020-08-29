@@ -19,9 +19,10 @@ y_test = np.genfromtxt("data/test_labels.csv")
 # from sklearn.neighbors import KNeighborsClassifier
 # from sklearn.naive_bayes import GaussianNB 
 # from sklearn.svm import SVC
-from sklearn.linear_model import SGDClassifier
+# from sklearn.linear_model import SGDClassifier
+from sklearn.neural_network import MLPClassifier
 
-clf = SGDClassifier(eta0=1, max_iter=1000, tol=0.0001, alpha=0.01, l1_ratio=1.0, learning_rate='adaptive', loss='log', penalty='elasticnet')
+clf = MLPClassifier(random_state=1, max_iter=300)
 
 clf.fit(X_train,y_train)
 
