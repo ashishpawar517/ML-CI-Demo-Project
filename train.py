@@ -18,8 +18,10 @@ y_test = np.genfromtxt("data/test_labels.csv")
 # from sklearn.ensemble import RandomForestClassifier
 # from sklearn.neighbors import KNeighborsClassifier
 # from sklearn.naive_bayes import GaussianNB 
-from sklearn.svm import SVC
-clf = SVC(kernel='rbf', C=1.0, gamma='auto', probability=True)
+# from sklearn.svm import SVC
+from sklearn.linear_model import SGDClassifier
+
+clf = SGDClassifier(eta0=1, max_iter=1000, tol=0.0001, alpha=0.01, l1_ratio=1.0, learning_rate='adaptive', loss='log', penalty='elasticnet')
 
 clf.fit(X_train,y_train)
 
