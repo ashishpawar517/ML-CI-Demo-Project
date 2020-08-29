@@ -16,7 +16,8 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
-clf = LGBMClassifier()
+
+clf = XGBClassifier()
 
 clf.fit(X_train,y_train)
 
