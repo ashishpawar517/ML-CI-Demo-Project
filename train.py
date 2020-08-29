@@ -16,8 +16,9 @@ y_test = np.genfromtxt("data/test_labels.csv")
 # from xgboost import XGBClassifier
 # from lightgbm import LGBMClassifier
 # from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
-clf = KNeighborsClassifier(3)
+# from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB 
+clf = GaussianNB()
 
 clf.fit(X_train,y_train)
 
