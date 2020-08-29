@@ -1,4 +1,3 @@
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import plot_confusion_matrix
 import matplotlib.pyplot as plt
 import json
@@ -14,10 +13,11 @@ y_test = np.genfromtxt("data/test_labels.csv")
 # Fit a model
 
 
-from xgboost import XGBClassifier
-from lightgbm import LGBMClassifier
+# from xgboost import XGBClassifier
+# from lightgbm import LGBMClassifier
+from sklearn.ensemble import RandomForestClassifier
 
-clf = XGBClassifier()
+clf = RandomForestClassifier()
 
 clf.fit(X_train,y_train)
 
