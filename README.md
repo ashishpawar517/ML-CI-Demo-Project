@@ -8,7 +8,7 @@
 
 ## Install
 
-Create a new file in `.github/workflows/cml.yaml` with the following:
+Create a new file in `.github/workflows/cml.yml` with the following:
 
 ```yml
 name: first_ML_workflow
