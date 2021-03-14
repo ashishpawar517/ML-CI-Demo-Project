@@ -67,7 +67,7 @@ Now, whenever you commit/push onto GitHub master branch,This workflow will calcu
 
 ## License & Conduct
 
-- VJIT © [Aashish Pawar](https://github.com/pawarashish564)
+- [Aashish Pawar](https://github.com/pawarashish564)
 <!-- - [Code of Conduct](code-of-conduct.md) -->
 
 <br>
